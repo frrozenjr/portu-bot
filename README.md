@@ -9,7 +9,7 @@ The bot works by taking your messages and randomly saying them + some specific s
 
 # Instructions
 1. Download the source code and put it inside a folder.
-2. Take the folder inside the rar and put it inside the folder.
+2. Extract the rar inside the folder
 3. Open the index.js file if you wanna change anything (its gonna be commented if you want help)
 4. Open the .env and change TOKEN= to your bot token
 5. Make a bat file.
