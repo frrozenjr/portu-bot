@@ -28,6 +28,8 @@ Features
 ```
 Can respond to questions but randomly.
 (Specific) If you tell it "pls remember" itll remember smth and say it back if you say "did you remember"
+If you start your message with "$" itll ignore it.
+If you start your message with "?" itll not take it as a question.
 ```
 General
 ```
