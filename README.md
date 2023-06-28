@@ -23,6 +23,7 @@ Commands
 ```
 >changelog (owner only commmand) Changes the /changelog command.
 >iq How many sentences it learnt.
+>reset Reset its sentences.
 ```
 Features
 ```
