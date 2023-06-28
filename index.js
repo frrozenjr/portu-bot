@@ -83,6 +83,7 @@ function updateEnvVariable(variable, newValue) {
 
 // chat bot code
 async function chatBotter(message, hashtag) {
+    const newMsg = message.content.replace("\n", "")
     const msg = message.content.split(" ")
     if(message.content.substring(0,1) !== "$") {
         if(message.content.substring(0,1) !== "?") {
@@ -93,7 +94,7 @@ async function chatBotter(message, hashtag) {
             return
         }
         if(message.content.toLowerCase().includes("did you remember")) {
-            message.reply("yeah you said " + process.env.INMIND.toString())
+            message.reply("yeah you said " + process.env.INMIND.toString().replace("@", "[at]"))
             return
         }
         if(message.content.toLowerCase().includes(" or ")){
@@ -148,14 +149,14 @@ async function chatBotter(message, hashtag) {
         if(cachee.includes(message.content.substring(hashtag))){
             
         } else {
-            if(message.content.substring(messageLength) === "") { /// message length === 123
-                if(message.content.substring(hashtag).includes("<@") && message.content.substring(hashtag).includes(">") && banPings === true || message.content.substring(hashtag).includes("@everyone") && banPings === true || message.content.substring(hashtag).includes("@here") && banPings === true) {} else {
+            if(message.content.substring(123) === "") { /// message length === 123
+                if(message.content.substring(hashtag).includes("<@") && message.content.substring(hashtag).includes(">") || message.content.substring(hashtag).includes("@everyone") || message.content.substring(hashtag).includes("@here")) {} else {
                 var randomness = Math.floor(Math.random() * 6)
                 if(randomness === 1) {const reply = cachee[Math.floor(Math.random() * cachee.length)]; 
                     
-                    cachee.push(message.content.substring(hashtag, 146) + " " + reply) } else
+                    cachee.push(newMsg.substring(hashtag, 146) + " " + reply) } else
                    
-        cachee.push(message.content.substring(hashtag, 146)) 
+        cachee.push(newMsg.substring(hashtag, 146)) 
         fs.unlinkSync("cache.txt") // save
         var cachear = '"hi"'
         for(i = 1; i < cachee.length; i++){
@@ -169,23 +170,21 @@ async function chatBotter(message, hashtag) {
         if(Math.floor(Math.random() * 4) < 1) {
             reply = reply.toLowerCase()
         }
-        if(message.content.substring(123) !== "" && message.author.id !== ownerID) { /// message length === 123
+        if(message.content.substring(123) !== "" && message.author.id !== "662996038839173140") { /// message length === 123
             message.reply("fuck you")
         } else {
-            if(banPings === true){
             if(message.content.substring(hashtag).includes("<@") && message.content.substring(hashtag).includes(">")) {
                 const ip = Math.floor(Math.random() * 255) + "." + Math.floor(Math.random() * 255) + "." + Math.floor(Math.random() * 255) + "." + Math.floor(Math.random() * 255)
                 message.reply(ip)} else { if( message.content.substring(hashtag).includes("@everyone") || message.content.substring(hashtag).includes("@here")){
                     const ip = Math.floor(Math.random() * 255) + "." + Math.floor(Math.random() * 255) + "." + Math.floor(Math.random() * 255) + "." + Math.floor(Math.random() * 255)
                     message.reply("fuck you " + ip)} else {
         message.reply(reply); } } } } }
-                    } else { message.reply(reply) }
     if(message.content.substring(0) === ">reset") {
-        if(message.author.id === ownerID) {
+        if(message.author.id === "662996038839173140") {
         message.reply("**i forgor**")
         fs.unlinkSync("cache.txt") // reset
         fs.writeFileSync("cache.txt", '["hi"]') } else {
-            message.reply("ping the bot hoster instead") // you can put your own name
+            message.reply("ping fritty instead")
         }
     }
     if(message.content.substring(0) === ">iq") {
