@@ -17,6 +17,7 @@ The bot works by taking your messages and randomly saying them + some specific s
 node .\index.js
 goto a```
 7. Run the bat file after you've changed the index.js to start the bot.
+8. (optional) Open the cache.txt and change the first word if you want.
 
 # Usage
 Commands 
