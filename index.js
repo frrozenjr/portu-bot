@@ -102,7 +102,7 @@ async function chatBotter(message, hashtag) {
             message.reply("i pick " + answer)
             return
         }
-        if(message.content.toLowerCase().includes("say") && Math.floor(Math.random() * 4) < 2) {
+        if(message.content.toLowerCase().substring(0,3) === "say" && Math.floor(Math.random() * 4) < 2) {
             const re = ('"' + message.content.substring(4) + '" - ' + message.author.username + " (stupid head)").replace("@", "[at]")
             message.reply(re)
             return
