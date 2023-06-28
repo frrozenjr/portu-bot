@@ -1,5 +1,6 @@
 # portu-bot
 A chain bot made from scratch by me. It is made to be a discord chat bot but can be dumb (it doesnt use machine learning)
+The bot works by taking your messages and randomly saying them + some specific sentences it can respond to (questions, etc)
 
 # Requirements
 - Nodejs v18.16.1 (the current newest version)
@@ -22,7 +23,6 @@ Commands
 ```
 >changelog (owner only commmand) Changes the /changelog command.
 >iq How many sentences it learnt.
->
 ```
 Features
 ```
