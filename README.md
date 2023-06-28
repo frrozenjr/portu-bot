@@ -35,3 +35,5 @@ General
 ```
 The bot will talk to you back inside the channel you set it to.
 ```
+
+im sorry for the bad code lol
