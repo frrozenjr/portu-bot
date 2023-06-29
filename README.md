@@ -10,8 +10,8 @@ The bot works by taking your messages and randomly saying them + some specific s
 # Instructions
 1. Download the source code and put it inside a folder.
 2. Extract the rar inside the folder
-3. Open the index.js file if you wanna change anything (its gonna be commented if you want help)
-4. Open the .env and change TOKEN= to your bot token
+3. (optional) Open the index.js file if you wanna change anything (its gonna be commented if you want help)
+4. Open the .env and change the values inside it to what it needs to be
 5. Make a bat file.
 6. Add this into it ```:a
 node .\index.js
