@@ -17,11 +17,11 @@ const stop = ["no", "ok"]; // what it should say when you say stop
 const who = ["they are probably ", "maybe they are ", "they are "];  // what it should say when you ask who
 const where = ["in ", "not in "] // what it should say when you ask where
 
-const ownerID = "" // put your userid here
-const channelID = "" // put your channel id where the bot will message
-const serverID = "" // put your server id here
+const ownerID = process.env.YOURUSERID
+const channelID = process.env.CHANNELID
+const serverID = process.env.SERVERID
 
-const messageLength = 123 // how long your message can be before it ignores it
+const messageLength = process.env.MESSAGELENGTH
 
 require('dotenv').config();
 
