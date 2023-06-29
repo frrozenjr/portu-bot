@@ -22,7 +22,6 @@ const channelID = "" // put your channel id where the bot will message
 const serverID = "" // put your server id here
 
 const messageLength = 123 // how long your message can be before it ignores it
-const banPings = true // if it should ban pings (aka if you ping the anyone in the bot channel itll ignore you so it doesnt ping back)
 
 require('dotenv').config();
 
